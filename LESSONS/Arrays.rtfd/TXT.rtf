@@ -1,0 +1,712 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fswiss\fcharset0 Helvetica;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fmodern\fcharset0 Courier;\f4\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;\red45\green68\blue134;
+\red0\green0\blue83;\red234\green234\blue234;\red193\green193\blue193;\red18\green139\blue2;\red43\green139\blue39;
+\red1\green32\blue135;\red83\green83\blue83;\red190\green74\blue193;\red11\green85\blue38;\red0\green0\blue255;
+\red10\green82\blue135;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 Fixed-size Arrays with []\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 \
+\pard\pardeftab720\sl340\qc
+
+\f1 \cf0 \pard\pardeftab720\sl340\qc
+
+\f0 \cf2 \
+\pard\pardeftab720\sl340
+\cf2 \
+\pard\pardeftab720\sl340
+{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html"}}{\fldrslt \cf4 http://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html}}\
+Arrays are ways to store many objects and variables in one object or variable. We have already been working with one kind of Array, the String. A String is really an Object which stores many characters.\
+\pard\pardeftab720\sl400\sa300
+\cf2 \
+Arrays make use of the bracket characters to reference elements in the array.\
+Arrays must have a specified length when they are created. This is an example of creating an int array of size \'93number_of_elements\'94. Here, number_of_elements must be an int greater than zero.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf5 \cb1 int
+\f3\b0 \cf8 []\cf0  array \cf9 =\cf0  
+\f2\b new
+\f3\b0  
+\f2\b \cf5 int
+\f3\b0 \cf8 [\cf0 number_of_elements\cf8 ]\cf9 ;\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 The indicies of the array will run from 0 to length-1.\
+Arrays are just storage containers for objects and variables, they do not create the variables or objects automatically.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl340\sa100
+\ls1\ilvl0\cf2 		Primitive variables will be initialized to 0, false, or nothing depending on the variable type.\
+		String Objects will be initialized to null\
+		Arrays of Objects will be initialized to null\
+\pard\pardeftab720\sl340\sa300
+
+\b\fs40 \cf2 Code Examples 1: Basic Arrays\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 Code working with arrays of int, String.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth14320\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f3\b0  
+\f2\b class
+\f3\b0  Test \cf8 \{\cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b static
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  main\cf8 (\cf10 String\cf8 []\cf0  args\cf8 )\cf0  \cf8 \{\cf0 \
+		
+\f4\i \cf11 // Making an array of 10 integers
+\f3\i0 \cf0 \
+		
+\f2\b \cf5 int
+\f3\b0 \cf8 []\cf0  x \cf9 =\cf0  
+\f2\b new
+\f3\b0  
+\f2\b \cf5 int
+\f3\b0 \cf8 [\cf12 10\cf8 ]\cf9 ;\cf0 \
+		
+\f2\b for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  x.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 x\cf8 [\cf0 i\cf8 ])\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+\'a0\
+		
+\f4\i \cf11 // This is a storage container of strings (5)
+\f3\i0 \cf0 \
+		\cf10 String\cf8 []\cf0  c \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 String\cf8 [\cf12 5\cf8 ]\cf9 ;\cf0 \
+		
+\f2\b for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  c.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 c\cf8 [\cf0 i\cf8 ])\cf9 ;\cf0  
+\f4\i \cf11 // These do not exist, so it will print null
+\f3\i0 \cf0 \
+		\cf8 \}\cf0 \
+\'a0\
+		
+\f4\i \cf11 // s is of type string array, String[]
+\f3\i0 \cf0 \
+		\cf10 String\cf8 []\cf0  s \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 String\cf8 [\cf12 3\cf8 ]\cf9 ;\cf0 \
+		s\cf8 [\cf12 2\cf8 ]\cf0  \cf9 =\cf0  \cf14 "Something1"\cf9 ;\cf0 \
+		s\cf8 [\cf12 1\cf8 ]\cf0  \cf9 =\cf0  \cf14 "Something2"\cf9 ;\cf0 \
+		s\cf8 [\cf12 0\cf8 ]\cf0  \cf9 =\cf0  \cf14 "Something3"\cf9 ;\cf0 \
+		\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 s\cf8 )\cf9 ;\cf0  
+\f4\i \cf11 // This prints the memory location of the array
+\f3\i0 \cf0 \
+		
+\f4\i \cf11 //s[3] = "Something4";  This would be too many things for the array s
+\f3\i0 \cf0 \
+		
+\f2\b for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  s.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 s\cf8 [\cf0 i\cf8 ])\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Using the Page getLinks() method to get a String[]\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3 \cf10 \cb1 String\cf0  html \cf9 =\cf0  WebGet.\cf13 httpget\cf8 (\cf14 "http://pic.fsu.edu/"\cf8 )\cf9 ;\cf0 \
+Page p \cf9 =\cf0  
+\f2\b new
+\f3\b0  Page\cf8 (\cf0 html\cf8 )\cf9 ;\cf0 \
+\'a0\
+\cf10 String\cf8 []\cf0  links \cf9 =\cf0  p.\cf13 getLinks\cf8 ()\cf9 ;\cf0 \
+\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 links\cf8 )\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  links.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+	\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 links\cf8 [\cf0 i\cf8 ])\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 links.\cf13 length\cf8 )\cf9 ;\cf0 \
+\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 p.\cf13 numLinks\cf8 ())\cf9 ;\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Working with overloaded constructors in the Color class. Creating an array of colors.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3 \cf10 \cb1 Color\cf0  c \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 Color\cf8 (\cf12 100\cf0 ,\cf12 10\cf0 ,\cf12 10\cf8 )\cf9 ;\cf0 \
+\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 c\cf8 )\cf9 ;\cf0 \
+\cf10 Color\cf0  darkc \cf9 =\cf0  c.\cf13 darker\cf8 ()\cf9 ;\cf0 \
+\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 darkc\cf8 )\cf9 ;\cf0 \
+\'a0\
+\cf10 Color\cf8 []\cf0  c_array \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 Color\cf8 [\cf12 1000\cf9 *\cf12 1000\cf8 ]\cf9 ;\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Making a dynamic array (ArrayList) and using it to query the dataset.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3 \cf10 \cb1 ArrayList\cf0  list \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 ArrayList\cf8 ()\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf14 "Cat"\cf8 )\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf14 "Dog"\cf8 )\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf14 "Mouse"\cf8 )\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 for
+\f3\b0  \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  list.\cf13 size\cf8 ()\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+  \cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 list.\cf13 get\cf8 (\cf0 i\cf8 ))\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 if
+\f3\b0  \cf8 (\cf0 list.\cf13 contains\cf8 (\cf14 "Hat"\cf8 ))\{\cf0 \
+	\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf14 "This list has this word"\cf8 )\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 else
+\f3\b0  \cf8 \{\cf0 \
+	\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf14 "This list does not have this word"\cf8 )\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 Code Examples 2: Arrays of different types\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 Some of this code also shows ideas from our next topic, Inheritance and Polymorphism. Primarily, however, it shows how making arrays of objects works.\uc0\u8232 
+\b ArrayLecture.java
+\b0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth15860\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f3\b0  
+\f2\b class
+\f3\b0  ArrayLecture \cf8 \{\cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b static
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  main\cf8 (\cf10 String\cf8 []\cf0  args\cf8 )\cf0  \cf8 \{\cf0 \
+\'a0\
+		
+\f4\i \cf11 // This is an object that holds Animal objects, it is NOT an Animal object
+\f3\i0 \cf0 \
+		Animal\cf8 []\cf0  a1 \cf9 =\cf0  
+\f2\b new
+\f3\b0  Animal\cf8 [\cf12 2\cf8 ]\cf9 ;\cf0 \
+		
+\f4\i \cf11 // This is an object that holds String objects, it is NOT a String object
+\f3\i0 \cf0 \
+		\cf10 String\cf8 []\cf0  a2 \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 String\cf8 [\cf12 3\cf8 ]\cf9 ;\cf0 \
+\'a0\
+		a1\cf8 [\cf12 0\cf8 ]\cf0  \cf9 =\cf0  
+\f2\b new
+\f3\b0  Animal\cf8 ()\cf9 ;\cf0 \
+		a1\cf8 [\cf12 1\cf8 ]\cf0  \cf9 =\cf0  
+\f2\b new
+\f3\b0  Cat\cf8 ()\cf9 ;\cf0 \
+\'a0\
+		
+\f4\i \cf11 // An example of creating String objects and putting them
+\f3\i0 \cf0 \
+		
+\f4\i \cf11 // into a String array
+\f3\i0 \cf0 \
+		
+\f2\b for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  a2.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			a2\cf8 [\cf0 i\cf8 ]\cf0  \cf9 =\cf0  \cf14 "Hello"\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+\'a0\
+		
+\f4\i \cf11 // An example of creating Animal objects and putting them
+\f3\i0 \cf0 \
+		
+\f4\i \cf11 // into an Animal array
+\f3\i0 \cf0 \
+		
+\f2\b for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  a1.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			a1\cf8 [\cf0 i\cf8 ]\cf0  \cf9 =\cf0  
+\f2\b new
+\f3\b0  Animal\cf8 ()\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+\'a0\
+		printArray\cf8 (\cf0 a1\cf8 )\cf9 ;\cf0 \
+		\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf14 ""\cf8 )\cf9 ;\cf0 \
+		printArray\cf8 (\cf0 a2\cf8 )\cf9 ;\cf0 \
+\'a0\
+\'a0\
+		\cf10 Object\cf0  o \cf9 =\cf0  
+\f2\b new
+\f3\b0  Animal\cf8 ()\cf9 ;\cf0 \
+		
+\f4\i \cf11 // o.method();  // This will not work because method() is not in Object, it is in Animal
+\f3\i0 \cf0 \
+\'a0\
+	\cf8 \}\cf0 \
+\'a0\
+	
+\f4\i \cf11 // This will print any class that extends Object (which all classes do by default)
+\f3\i0 \cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b static
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  printArray\cf8 (\cf10 Object\cf8 []\cf0  x\cf8 )\cf0  \cf8 \{\cf0 \
+		
+\f2\b for
+\f3\b0 \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  x.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 i \cf9 +\cf0  \cf14 ": "\cf0  \cf9 +\cf0  x\cf8 [\cf0 i\cf8 ])\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 The following classes are needed for the above code to work:\uc0\u8232 
+\b Animal.java
+\b0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth14000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f3\b0  
+\f2\b class
+\f3\b0  Animal 
+\f2\b extends
+\f3\b0  \cf10 Object\cf0  \cf8 \{\cf0 \
+\'a0\
+	
+\f4\i \cf11 // Overrides the class Object's toString method
+\f3\i0 \cf0 \
+	
+\f2\b public
+\f3\b0  \cf10 String\cf0  toString\cf8 ()\cf0  \cf8 \{\cf0 \
+		
+\f2\b return
+\f3\b0  \cf14 "This is my overridden special toString method for an Animal object"\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+\'a0\
+	
+\f2\b public
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  method\cf8 ()\cf0  \cf8 \{\cf0 \
+\'a0\
+	\cf8 \}\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0\b \cf2 \cb3 Cat.java
+\b0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f3\b0  
+\f2\b class
+\f3\b0  Cat 
+\f2\b extends
+\f3\b0  Animal\cf8 \{\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 Dynamic Arrays with ArrayList\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 ArrayList is a class which can be used to dynamically store any number of objects. This allows us to create a container of objects without knowing previously how many spaces we will need. However, you cannot use bracket notation with ArrayList. ArrayList also provides many other methods for querying the set of data, easily removing data from the list, and adding elements at a certain position. With this functionality, this also means ArrayList is less efficient than normal arrays.\
+Here is an example of using ArrayList:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3 \cf10 \cb1 ArrayList\cf0  list \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 ArrayList\cf8 ()\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf12 10\cf8 )\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf12 20\cf8 )\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf12 30\cf8 )\cf9 ;\cf0 \
+list.\cf13 add\cf8 (\cf12 1\cf0 ,\cf12 15\cf8 )\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 for
+\f3\b0  \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  list.\cf13 size\cf8 ()\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+  \cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 list.\cf13 get\cf8 (\cf0 i\cf8 ))\cf9 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Dynamic Lists are not a part what is included in java by default. It must be imported at the top of your code before your class definition.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 import
+\f3\b0  \cf15 java.util.ArrayList\cf9 ;\cf0 \
+
+\f2\b class
+\f3\b0  MyClass \cf8 \{\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 There is also a utility class called Arrays which has methods for searching Arrays and converting normal Arrays to Lists.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 import
+\f3\b0  \cf15 java.util.ArrayList\cf9 ;\cf0 \
+
+\f2\b import
+\f3\b0  \cf15 java.util.Arrays\cf9 ;\cf0 \
+
+\f2\b public
+\f3\b0  
+\f2\b Class
+\f3\b0  Test\cf8 \{\cf0 \
+  
+\f2\b public
+\f3\b0  
+\f2\b static
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  main\cf8 (\cf10 String\cf0  args\cf8 [])\cf0  \cf8 \{\cf0 \
+\'a0\
+    \cf10 String\cf0  html \cf9 =\cf0  WebGet.\cf13 httpget\cf8 (\cf14 "http://pic.fsu.edu/"\cf8 )\cf9 ;\cf0 \
+    Page p \cf9 =\cf0  
+\f2\b new
+\f3\b0  Page\cf8 (\cf0 html\cf8 )\cf9 ;\cf0 \
+    \cf10 String\cf8 []\cf0  w \cf9 =\cf0  p.\cf13 getWords\cf8 ()\cf9 ;\cf0 \
+    \cf10 ArrayList\cf0  words \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 ArrayList\cf8 (\cf10 Arrays\cf0 .\cf13 asList\cf8 (\cf0 w\cf8 ))\cf9 ;\cf0 \
+    
+\f2\b if
+\f3\b0  \cf8 (\cf0 words.\cf13 contains\cf8 (\cf14 "Computing"\cf8 ))\cf0  \cf8 \{\cf0 \
+      \cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf14 "This word is on the page."\cf8 )\cf9 ;\cf0 \
+    \cf8 \}\cf0 \
+    
+\f2\b else
+\f3\b0  \cf8 \{\cf0 \
+      \cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf14 "This word is not on the page."\cf8 )\cf9 ;\cf0 \
+    \cf8 \}\cf0 \
+  \cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 The Deck of Cards Example\
+\pard\pardeftab720\sl400\sa300
+
+\f1\b0\fs24 \cf0 
+\f0 \cf2 \
+Game.java\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f3\b0  
+\f2\b class
+\f3\b0  Game \cf8 \{\cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b static
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  main\cf8 (\cf10 String\cf0  args\cf8 [])\cf0  \cf8 \{\cf0 \
+		Deck d \cf9 =\cf0  
+\f2\b new
+\f3\b0  Deck\cf8 ()\cf9 ;\cf0 \
+		d.\cf13 shuffle\cf8 (\cf12 100000\cf8 )\cf9 ;\cf0 \
+		
+\f2\b while
+\f3\b0 \cf8 (\cf0 d.\cf13 hasCards\cf8 ())\cf0  \cf8 \{\cf0 \
+			Card c \cf9 =\cf0  d.\cf13 deal\cf8 ()\cf9 ;\cf0 \
+			\cf10 System\cf0 .\cf13 out\cf0 .\cf13 println\cf8 (\cf0 c\cf8 )\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Deck.java\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth15240\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3 \cf0 \cb1 \'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 import
+\f3\b0  \cf15 java.util.Random\cf9 ;\cf0 \
+
+\f2\b public
+\f3\b0  
+\f2\b class
+\f3\b0  Deck \cf8 \{\cf0 \
+	
+\f2\b private
+\f3\b0  Card\cf8 []\cf0  cards\cf9 ;\cf0 \
+	
+\f2\b private
+\f3\b0  
+\f2\b \cf5 int
+\f3\b0 \cf0  position\cf9 ;\cf0 \
+	
+\f2\b private
+\f3\b0  \cf10 Random\cf0  r\cf9 ;\cf0 \
+\'a0\
+	
+\f2\b public
+\f3\b0  Deck\cf8 ()\cf0  \cf8 \{\cf0 \
+		r \cf9 =\cf0  
+\f2\b new
+\f3\b0  \cf10 Random\cf8 ()\cf9 ;\cf0 \
+		position \cf9 =\cf0  \cf12 0\cf9 ;\cf0 \
+		
+\f4\i \cf11 // TODO: create all the cards
+\f3\i0 \cf0 \
+		cards \cf9 =\cf0  
+\f2\b new
+\f3\b0  Card\cf8 [\cf12 52\cf8 ]\cf9 ;\cf0 \
+		\cf10 String\cf8 []\cf0  suits \cf9 =\cf0  \cf8 \{\cf14 "Diamonds"\cf0 , \cf14 "Spades"\cf0 , \cf14 "Clubs"\cf0 , \cf14 "Hearts"\cf8 \}\cf9 ;\cf0 \
+		\cf10 String\cf8 []\cf0  ranks \cf9 =\cf0  \cf8 \{\cf14 "2"\cf0 ,\cf14 "3"\cf0 ,\cf14 "4"\cf0 ,\cf14 "5"\cf0 ,\cf14 "6"\cf0 ,\cf14 "7"\cf0 ,\cf14 "8"\cf0 ,\cf14 "9"\cf0 ,\cf14 "10"\cf0 ,\cf14 "Jack"\cf0 ,\cf14 "Queen"\cf0 ,\cf14 "King"\cf0 ,\cf14 "Ace"\cf8 \}\cf9 ;\cf0 \
+		
+\f2\b \cf5 int
+\f3\b0 \cf0  count \cf9 =\cf0  \cf12 0\cf9 ;\cf0 \
+		
+\f2\b for
+\f3\b0  \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  suits.\cf13 length\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			
+\f2\b for
+\f3\b0  \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  j \cf9 =\cf0  \cf12 0\cf9 ;\cf0  j \cf9 <\cf0  ranks.\cf13 length\cf9 ;\cf0  j\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+				cards\cf8 [\cf0 count\cf8 ]\cf0  \cf9 =\cf0  
+\f2\b new
+\f3\b0  Card\cf8 (\cf0 suits\cf8 [\cf0 i\cf8 ]\cf0 , ranks\cf8 [\cf0 j\cf8 ])\cf9 ;\cf0 \
+				count \cf9 =\cf0  count \cf9 +\cf12 1\cf9 ;\cf0 \
+			\cf8 \}\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  shuffle\cf8 ()\cf0  \cf8 \{\cf0 \
+		
+\f2\b \cf5 int
+\f3\b0 \cf0  n1 \cf9 =\cf0  r.\cf13 nextInt\cf8 (\cf12 52\cf8 )\cf9 ;\cf0 \
+		
+\f2\b \cf5 int
+\f3\b0 \cf0  n2 \cf9 =\cf0  r.\cf13 nextInt\cf8 (\cf12 52\cf8 )\cf9 ;\cf0 \
+		Card c1 \cf9 =\cf0  cards\cf8 [\cf0 n1\cf8 ]\cf9 ;\cf0 \
+		Card c2 \cf9 =\cf0  cards\cf8 [\cf0 n2\cf8 ]\cf9 ;\cf0 \
+		cards\cf8 [\cf0 n1\cf8 ]\cf0  \cf9 =\cf0  c2\cf9 ;\cf0 \
+		cards\cf8 [\cf0 n2\cf8 ]\cf0  \cf9 =\cf0  c1\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+	
+\f4\i \cf11 // method overloading: we have multiple methods
+\f3\i0 \cf0 \
+	
+\f4\i \cf11 // with the same name, but different parameters
+\f3\i0 \cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b \cf5 void
+\f3\b0 \cf0  shuffle\cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  x\cf8 )\cf0  \cf8 \{\cf0 \
+		
+\f2\b for
+\f3\b0  \cf8 (
+\f2\b \cf5 int
+\f3\b0 \cf0  i \cf9 =\cf0  \cf12 0\cf9 ;\cf0  i \cf9 <\cf0  x\cf9 ;\cf0  i\cf9 ++\cf8 )\cf0  \cf8 \{\cf0 \
+			shuffle\cf8 ()\cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+	
+\f2\b public
+\f3\b0  Card deal\cf8 ()\cf0  \cf8 \{\cf0 \
+		Card c \cf9 =\cf0  cards\cf8 [\cf0 position\cf8 ]\cf9 ;\cf0 \
+		position \cf9 =\cf0  position \cf9 +\cf0  \cf12 1\cf9 ;\cf0 \
+		
+\f2\b return
+\f3\b0  c\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+	
+\f2\b public
+\f3\b0  
+\f2\b \cf5 boolean
+\f3\b0 \cf0  hasCards\cf8 ()\cf0  \cf8 \{\cf0 \
+		
+\f4\i \cf11 // return true if there are still cards
+\f3\i0 \cf0 \
+		
+\f4\i \cf11 // return false if there are not
+\f3\i0 \cf0 \
+		
+\f2\b if
+\f3\b0  \cf8 (\cf0 position \cf9 <\cf0  \cf12 52\cf8 )\cf0  \cf8 \{\cf0 \
+			
+\f2\b return
+\f3\b0  
+\f2\b \cf5 true
+\f3\b0 \cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+		
+\f2\b else
+\f3\b0 	\cf8 \{\cf0 \
+			
+\f2\b return
+\f3\b0  
+\f2\b \cf5 false
+\f3\b0 \cf9 ;\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Card.java\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf7 \trbrdrl\brdrs\brdrw40\brdrcf7 \trbrdrb\brdrs\brdrw40\brdrcf7 \trbrdrr\brdrs\brdrw40\brdrcf7 
+\clvertalt \clcbpat6 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f3\b0  
+\f2\b class
+\f3\b0  Card \cf8 \{\cf0 \
+	
+\f2\b private
+\f3\b0  \cf10 String\cf0  suit\cf9 ;\cf0 \
+	
+\f2\b private
+\f3\b0  \cf10 String\cf0  rank\cf9 ;\cf0 \
+\'a0\
+	
+\f2\b public
+\f3\b0  Card\cf8 (\cf10 String\cf0  suit, \cf10 String\cf0  rank\cf8 )\cf0  \cf8 \{\cf0 \
+		
+\f2\b this
+\f3\b0 .\cf13 suit\cf0  \cf9 =\cf0  suit\cf9 ;\cf0 \
+		
+\f2\b this
+\f3\b0 .\cf13 rank\cf0  \cf9 =\cf0  rank\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+\'a0\
+	
+\f2\b public
+\f3\b0  \cf10 String\cf0  getRank\cf8 ()\cf0  \cf8 \{\cf0 \
+		
+\f2\b return
+\f3\b0  rank\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+	
+\f2\b public
+\f3\b0  \cf10 String\cf0  getSuit\cf8 ()\cf0  \cf8 \{\cf0 \
+		
+\f2\b return
+\f3\b0  suit\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+	
+\f4\i \cf11 // method overriding: we are making toString do something 
+\f3\i0 \cf0 \
+	
+\f4\i \cf11 // different than what it did in class Object
+\f3\i0 \cf0 \
+	
+\f2\b public
+\f3\b0  \cf10 String\cf0  toString\cf8 ()\cf0  \cf8 \{\cf0 \
+		
+\f2\b return
+\f3\b0  rank \cf9 +\cf0  \cf14 " of "\cf0  \cf9 +\cf0  suit\cf9 ;\cf0 \
+	\cf8 \}\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+}

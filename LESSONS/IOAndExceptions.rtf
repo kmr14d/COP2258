@@ -1,0 +1,563 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;\red45\green68\blue134;
+\red234\green234\blue234;\red193\green193\blue193;\red43\green139\blue39;\red18\green139\blue2;\red1\green32\blue135;
+\red11\green85\blue38;\red0\green0\blue255;\red83\green83\blue83;\red0\green0\blue83;\red190\green74\blue193;
+\red0\green0\blue135;\red10\green82\blue135;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 File/Console I/O Classes\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 Java Scanner:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/util/Scanner.html"}}{\fldrslt \cf4 http://docs.oracle.com/javase/6/docs/api/java/util/Scanner.html}}\
+Console I/O Code Example:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f1 \cf0 \cb1 Scanner s \cf7 =\cf0  
+\f2\b new
+\f1\b0  Scanner\cf8 (\cf9 System\cf0 .\cf10 in\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 while
+\f1\b0 \cf8 (\cf0 s.\cf10 hasNext\cf8 ())\cf0  \cf8 \{\cf0 \
+	\cf9 String\cf0   str \cf7 =\cf0  s.\cf10 next\cf8 ()\cf7 ;\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "INPUT: "\cf0  \cf7 +\cf0  str\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 Java File class:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/io/File.html"}}{\fldrslt \cf4 http://docs.oracle.com/javase/6/docs/api/java/io/File.html}}\
+Java FileWriter:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/io/FileWriter.html"}}{\fldrslt \cf4 http://docs.oracle.com/javase/6/docs/api/java/io/FileWriter.html}}\
+Java FileReader:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/io/FileReader.html"}}{\fldrslt \cf4 http://docs.oracle.com/javase/6/docs/api/java/io/FileReader.html}}\
+\pard\pardeftab720\sl340\sa300
+
+\b\fs40 \cf2 Exceptions\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 Java was built to withstand program failure through recovery sequences called Exceptions. Nearly every modern programming language uses the concept of exceptions in a very similar way to Java. Exceptions allow a program to have errors, but continue executing more program executions rather than simply ending.\
+\pard\pardeftab720\sl400\sa300
+{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/tutorial/essential/exceptions/index.html"}}{\fldrslt \cf4 http://docs.oracle.com/javase/tutorial/essential/exceptions/index.html}}\
+There are 3 kinds of problems your program may run into in Java:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl340\sa100
+\ls1\ilvl0\cf2 {\listtext	1.	}Checked exceptions: Exceptions which must be caught or re-thrown.\
+{\listtext	2.	}Program Errors: Errors with hardware/system failures.\
+{\listtext	3.	}Unchecked Exceptions: Exceptions which do not have to be checked, like dividing by zero or indexing arrays.\
+\pard\pardeftab720\sl340\sa300
+
+\b\fs40 \cf2 Checked Exceptions\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 Exception is the base, or parent, class for all Exception classes. All other Exception classes extend Exception. For example, {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/io/FileNotFoundException.html"}}{\fldrslt \cf4 FileNotFoundException}} extends {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html"}}{\fldrslt \cf4 IOException}} which extends {\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"}}{\fldrslt \cf4 Exception}}. This exception can be caught when trying to access a file that does not exist. Then, the program could ask the user to try another file instead.\
+Since you are forced to check these Exception classes before you can even compile the code, your Java code will withstand these errors and recover in some way.\
+\pard\pardeftab720\sl400\sa300
+{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/tutorial/essential/exceptions/handling.html"}}{\fldrslt \cf4 Catching and Handling Exceptions}}\
+Code Examples:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 \cb1 // Reading a file using the FileReader class
+\f1\i0 \cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf9 File\cf0  f \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "testfile"\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 try
+\f1\b0  \cf8 \{\cf0 \
+	\cf9 FileReader\cf0  fr \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 FileReader\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+	
+\f2\b \cf13 char
+\f1\b0 \cf8 []\cf0  buffer \cf7 =\cf0  
+\f2\b new
+\f1\b0  
+\f2\b \cf13 char
+\f1\b0 \cf8 [(
+\f2\b \cf13 int
+\f1\b0 \cf8 )\cf0 f.\cf10 length\cf8 ()]\cf7 ;\cf0 \
+	fr.\cf10 read\cf8 (\cf0 buffer\cf8 )\cf7 ;\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 buffer\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 FileNotFoundException\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "This file was not found."\cf8 )\cf7 ;\cf0 \
+	e.\cf10 printStackTrace\cf8 ()\cf7 ;\cf0 \
+\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 IOException\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "This file could not be read."\cf8 )\cf7 ;\cf0 \
+	e.\cf10 printStackTrace\cf8 ()\cf7 ;\cf0 \
+\cf8 \}\cf0 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 // Reading a file using the Scanner class
+\f1\i0 \cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf9 File\cf0  f \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "testfile"\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 try
+\f1\b0  \cf8 \{\cf0 \
+	\cf9 FileReader\cf0  fr \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 FileReader\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+	Scanner s \cf7 =\cf0  
+\f2\b new
+\f1\b0  Scanner\cf8 (\cf0 fr\cf8 )\cf7 ;\cf0 \
+	
+\f2\b while
+\f1\b0 \cf8 (\cf0 s.\cf10 hasNext\cf8 ())\cf0  \cf8 \{\cf0 \
+		\cf9 String\cf0   str \cf7 =\cf0  s.\cf10 next\cf8 ()\cf7 ;\cf0 \
+		\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "INPUT: "\cf0  \cf7 +\cf0  str\cf8 )\cf7 ;\cf0 \
+	\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 FileNotFoundException\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "This file was not found."\cf8 )\cf7 ;\cf0 \
+	e.\cf10 printStackTrace\cf8 ()\cf7 ;\cf0 \
+\cf8 \}\cf0 \cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 // Using Scanner to ask for a file to open.
+\f1\i0 \cf0 \
+
+\f3\i \cf12 // The program will loop until a valid file can be opened
+\f1\i0 \cf0 \
+
+\f3\i \cf12 // Then the file will be printed line by line
+\f1\i0 \cf0 \
+Scanner input \cf7 =\cf0  
+\f2\b new
+\f1\b0  Scanner\cf8 (\cf9 System\cf0 .\cf10 in\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf13 boolean
+\f1\b0 \cf0  noFile \cf7 =\cf0  
+\f2\b \cf13 true
+\f1\b0 \cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 while
+\f1\b0 \cf8 (\cf0 noFile\cf8 )\cf0  \cf8 \{\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 print\cf8 (\cf11 "Open a file: "\cf8 )\cf7 ;\cf0 \
+	\cf9 String\cf0  filename \cf7 =\cf0  input.\cf10 nextLine\cf8 ()\cf7 ;\cf0 \
+	\cf9 File\cf0  f \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf0 filename\cf8 )\cf7 ;\cf0 \
+	
+\f2\b try
+\f1\b0  \cf8 \{\cf0 \
+		\cf9 FileReader\cf0  fr \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 FileReader\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+		Scanner s \cf7 =\cf0  
+\f2\b new
+\f1\b0  Scanner\cf8 (\cf0 fr\cf8 )\cf7 ;\cf0 \
+		
+\f2\b while
+\f1\b0 \cf8 (\cf0 s.\cf10 hasNext\cf8 ())\cf0  \cf8 \{\cf0 \
+			\cf9 String\cf0   str \cf7 =\cf0  s.\cf10 next\cf8 ()\cf7 ;\cf0 \
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "INPUT: "\cf0  \cf7 +\cf0  str\cf8 )\cf7 ;\cf0 \
+		\cf8 \}\cf0 \
+		noFile \cf7 =\cf0  
+\f2\b \cf13 false
+\f1\b0 \cf7 ;\cf0 \
+	\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 FileNotFoundException\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+		\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "This file does not exist."\cf8 )\cf7 ;\cf0 \
+	\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "End of the program"\cf8 )\cf7 ;\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 Error\
+\pard\pardeftab720\sl400\sa300
+{\field{\*\fldinst{HYPERLINK "http://docs.oracle.com/javase/6/docs/api/java/lang/Error.html"}}{\fldrslt 
+\b0\fs24 \cf4 Error}}
+\b0\fs24  is a situation where your program probably cannot do anything to solve the problem. This usually means there is a hardware or system failure. In these cases, the program itself might not even throw the Error because the physical system or OS is failing in some way.\
+\pard\pardeftab720\sl340\sa300
+
+\b\fs40 \cf2 Unchecked Exceptions\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 These problems you do not have to try/catch or throw. These occur at runtime rather than being checked at compile time. This means even though there may be a problem, the code will compile and attempt to run. These kinds of errors indicate that you have a logical coding error that you need to fix in your source code, as opposed to handling with try/catch.\
+Code examples:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 \cb1 // You cannot divide by 0
+\f1\i0 \cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf13 int
+\f1\b0 \cf0  x \cf7 =\cf0  \cf14 10\cf7 /\cf14 0\cf7 ;\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 // You cannot access array indexes outside of the size of the array
+\f1\i0 \cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf13 char
+\f1\b0 \cf8 []\cf0  x \cf7 =\cf0  
+\f2\b new
+\f1\b0  
+\f2\b \cf13 char
+\f1\b0 \cf8 [\cf14 4\cf8 ]\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 x\cf8 [\cf14 10\cf8 ])\cf7 ;\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 // You cannot access methods or variables from null objects.
+\f1\i0 \cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf9 Object\cf0  o \cf7 =\cf0  
+\f2\b \cf13 null
+\f1\b0 \cf7 ;\cf0 \
+\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 o.\cf10 toString\cf8 ())\cf7 ;\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 More Classes with Exceptions\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 http://docs.oracle.com/javase/6/docs/api/javax/crypto/Cipher.html\
+http://docs.oracle.com/javase/1.4.2/docs/api/java/net/URI.html\
+http://docs.oracle.com/javase/6/docs/api/java/net/URL.html\
+http://docs.oracle.com/javase/6/docs/api/java/net/URLConnection.html\
+http://docs.oracle.com/javase/6/docs/api/java/io/InputStreamReader.html\
+http://docs.oracle.com/javase/6/docs/api/java/io/BufferedReader.html\
+Read WebGet Code from:\
+http://pic.fsu.edu/courses/oop/a2/\
+Another code example:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f3\i \cf12 \cb1 // Writing to a file and then reading from that file with Scanner.
+\f1\i0 \cf0 \
+
+\f3\i \cf12 // This code will catch all Exceptions, using the base class Exception
+\f1\i0 \cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf9 File\cf0  f \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "newfile"\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 try
+\f1\b0  \cf8 \{\cf0 \
+	\cf9 FileWriter\cf0  fw \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 FileWriter\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+	fw.\cf10 write\cf8 (\cf11 "Write a string to the file
+\f2\b \cf15 \\n
+\f1\b0 \cf11 "\cf8 )\cf7 ;\cf0 \
+	fw.\cf10 write\cf8 (\cf11 "Another line"\cf8 )\cf7 ;\cf0 \
+	fw.\cf10 close\cf8 ()\cf7 ;\cf0 \
+	\cf9 FileReader\cf0  fr \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 FileReader\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+	Scanner s \cf7 =\cf0  
+\f2\b new
+\f1\b0  Scanner\cf8 (\cf0 fr\cf8 )\cf7 ;\cf0 \
+	
+\f2\b \cf13 int
+\f1\b0 \cf0  i \cf7 =\cf0  \cf14 0\cf7 ;\cf0 \
+	
+\f2\b while
+\f1\b0 \cf8 (\cf0 s.\cf10 hasNext\cf8 ())\cf0  \cf8 \{\cf0 \
+		\cf9 String\cf0   str \cf7 =\cf0  s.\cf10 nextLine\cf8 ()\cf7 ;\cf0 \
+		\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 i \cf7 +\cf0  \cf11 ": "\cf0  \cf7 +\cf0  str\cf8 )\cf7 ;\cf0 \
+		i\cf7 ++;\cf0 \
+	\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 Exception\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+	e.\cf10 printStackTrace\cf8 ()\cf7 ;\cf0 \
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 A throws example:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 public
+\f1\b0  
+\f2\b static
+\f1\b0  
+\f2\b \cf13 void
+\f1\b0 \cf0  printData\cf8 (\cf9 File\cf0  f\cf8 )\cf0  
+\f2\b throws
+\f1\b0  \cf9 IOException\cf8 \{\cf0 \
+	\cf9 FileReader\cf0  fr \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 FileReader\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+	
+\f2\b \cf13 char
+\f1\b0 \cf8 []\cf0  buffer \cf7 =\cf0  
+\f2\b new
+\f1\b0  
+\f2\b \cf13 char
+\f1\b0 \cf8 [(
+\f2\b \cf13 int
+\f1\b0 \cf8 )\cf0 f.\cf10 length\cf8 ()]\cf7 ;\cf0 \
+	fr.\cf10 read\cf8 (\cf0 buffer\cf8 )\cf7 ;\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 buffer\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 public
+\f1\b0  
+\f2\b static
+\f1\b0  
+\f2\b \cf13 void
+\f1\b0 \cf0  main\cf8 (\cf9 String\cf8 []\cf0  args\cf8 )\cf0  \cf8 \{\cf0 \
+	\cf9 File\cf0  f \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "testfileuihkjhkhjkhjk"\cf8 )\cf7 ;\cf0 \
+	
+\f2\b try
+\f1\b0  \cf8 \{\cf0 \
+		printData\cf8 (\cf0 f\cf8 )\cf7 ;\cf0 \
+	\cf8 \}\cf0 \
+	
+\f2\b catch
+\f1\b0 \cf8 (\cf9 IOException\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+		\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "Could not read the file."\cf8 )\cf7 ;\cf0 \
+	\cf8 \}\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "End of program"\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 Some Code for A4\
+\pard\pardeftab720\sl400\sa300
+
+\b0\fs24 \cf2 Example using the Crypt class to encrypt and decrypt some data.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 try
+\f1\b0  \cf8 \{\cf0 \
+	\cf9 String\cf0  s \cf7 =\cf0  \cf11 "Hello this is my secret message"\cf7 ;\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "1: "\cf0  \cf7 +\cf0  s\cf8 )\cf7 ;\cf0 \
+\'a0\
+	Crypt c \cf7 =\cf0  
+\f2\b new
+\f1\b0  Crypt\cf8 (\cf11 "password"\cf8 )\cf7 ;\cf0 \
+	
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  data \cf7 =\cf0  s.\cf10 getBytes\cf8 ()\cf7 ;\cf0 \
+	
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  encryptedData \cf7 =\cf0  c.\cf10 encrypt\cf8 (\cf0 data\cf8 )\cf7 ;\cf0 \
+	\cf9 String\cf0  encString \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 String\cf8 (\cf0 encryptedData\cf8 )\cf7 ;\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "2: "\cf0  \cf7 +\cf0  encString\cf8 )\cf7 ;\cf0 \
+\'a0\
+	
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  decryptedData \cf7 =\cf0  c.\cf10 decrypt\cf8 (\cf0 encryptedData\cf8 )\cf7 ;\cf0 \
+	\cf9 String\cf0  decryptedString \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 String\cf8 (\cf0 decryptedData\cf8 )\cf7 ;\cf0 \
+	\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "3: "\cf0  \cf7 +\cf0  decryptedString\cf8 )\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 catch
+\f1\b0 \cf8 (\cf9 Exception\cf0  e\cf8 )\{\cf0 \
+	e.\cf10 printStackTrace\cf8 ()\cf7 ;\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl400\sa300
+
+\f0 \cf2 \cb3 More code for A4, showing reading/writing files and encrypting/decrypting data.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\b \cf0 \cb1 import
+\f1\b0  \cf16 java.io.File\cf7 ;\cf0 \
+
+\f2\b import
+\f1\b0  \cf16 java.io.IOException\cf7 ;\cf0 \
+\'a0\
+\'a0\
+
+\f2\b public
+\f1\b0  
+\f2\b class
+\f1\b0  Demo \cf8 \{\cf0 \
+	
+\f2\b public
+\f1\b0  
+\f2\b static
+\f1\b0  
+\f2\b \cf13 void
+\f1\b0 \cf0  main\cf8 (\cf9 String\cf8 []\cf0  args\cf8 )\cf0  \cf8 \{\cf0 \
+		\cf9 File\cf0  data \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "secret.txt"\cf8 )\cf7 ;\cf0 \
+		\cf9 File\cf0  out \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "encrypted.txt"\cf8 )\cf7 ;\cf0 \
+		\cf9 File\cf0  out2 \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 File\cf8 (\cf11 "decrypted.txt"\cf8 )\cf7 ;\cf0 \
+		
+\f2\b try
+\f1\b0  \cf8 \{\cf0 \
+			
+\f3\i \cf12 // Read the data file
+\f1\i0 \cf0 \
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  bdata \cf7 =\cf0  FileIO.\cf10 read\cf8 (\cf0 data\cf8 )\cf7 ;\cf0 \
+			
+\f3\i \cf12 // Encrypt the data and write it out
+\f1\i0 \cf0 \
+			Crypt c \cf7 =\cf0  
+\f2\b new
+\f1\b0  Crypt\cf8 (\cf11 "password"\cf8 )\cf7 ;\cf0 \
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  enc \cf7 =\cf0  c.\cf10 encrypt\cf8 (\cf0 bdata\cf8 )\cf7 ;\cf0 \
+			FileIO.\cf10 write\cf8 (\cf0 out, enc\cf8 )\cf7 ;\cf0 \
+			
+\f3\i \cf12 // Read the encrypted data 
+\f1\i0 \cf0 \
+			
+\f3\i \cf12 // and write out the decrypted data
+\f1\i0 \cf0 \
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  edata \cf7 =\cf0  FileIO.\cf10 read\cf8 (\cf0 out\cf8 )\cf7 ;\cf0 \
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  dec \cf7 =\cf0  c.\cf10 decrypt\cf8 (\cf0 edata\cf8 )\cf7 ;\cf0 \
+			FileIO.\cf10 write\cf8 (\cf0 out2, dec\cf8 )\cf7 ;\cf0 \
+		\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 IOException\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+			
+\f3\i \cf12 // TODO Auto-generated catch block
+\f1\i0 \cf0 \
+			e.\cf10 printStackTrace\cf8 ()\cf7 ;\cf0 \
+		\cf8 \}\cf0  
+\f2\b catch
+\f1\b0  \cf8 (\cf9 Exception\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "There was a problem"\cf8 )\cf7 ;\cf0 \
+		\cf8 \}\cf0 \
+	\cf8 \}\cf0 \
+\'a0\
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa300
+
+\f0\b\fs40 \cf2 \cb3 Example code for Assignment 4 from July 14\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \tamart100 \tamarb200 \trbrdrt\brdrs\brdrw40\brdrcf6 \trbrdrl\brdrs\brdrw40\brdrcf6 \trbrdrb\brdrs\brdrw40\brdrcf6 \trbrdrr\brdrs\brdrw40\brdrcf6 
+\clvertalt \clcbpat5 \clwWidth12460\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf6 \clbrdrl\brdrs\brdrw20\brdrcf6 \clbrdrb\brdrs\brdrw20\brdrcf6 \clbrdrr\brdrs\brdrw20\brdrcf6 \clpadt60 \clpadl200 \clpadb60 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl320
+
+\f2\fs24 \cf0 \cb1 import
+\f1\b0  \cf16 java.util.Scanner\cf7 ;\cf0 \
+\'a0\
+
+\f2\b public
+\f1\b0  
+\f2\b class
+\f1\b0  CryptDemo \cf8 \{\cf0 \
+	
+\f2\b public
+\f1\b0  
+\f2\b static
+\f1\b0  
+\f2\b \cf13 void
+\f1\b0 \cf0  main\cf8 (\cf9 String\cf8 []\cf0  args\cf8 )\cf0  \cf8 \{\cf0 \
+		
+\f2\b try
+\f1\b0  \cf8 \{\cf0 \
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "Choose a password:"\cf8 )\cf7 ;\cf0 \
+			Scanner s \cf7 =\cf0  
+\f2\b new
+\f1\b0  Scanner\cf8 (\cf9 System\cf0 .\cf10 in\cf8 )\cf7 ;\cf0 \
+			\cf9 String\cf0  pass \cf7 =\cf0  s.\cf10 nextLine\cf8 ()\cf7 ;\cf0 \
+			Crypt c \cf7 =\cf0  
+\f2\b new
+\f1\b0  Crypt\cf8 (\cf0 pass\cf8 )\cf7 ;\cf0 \
+\'a0\
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "Give me a message:"\cf8 )\cf7 ;\cf0 \
+			\cf9 String\cf0  message \cf7 =\cf0  s.\cf10 nextLine\cf8 ()\cf7 ;\cf0 \
+\'a0\
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  bdata \cf7 =\cf0  message.\cf10 getBytes\cf8 ()\cf7 ;\cf0 \
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  encryptedData \cf7 =\cf0  c.\cf10 encrypt\cf8 (\cf0 bdata\cf8 )\cf7 ;\cf0 \
+			\cf9 String\cf0  ed \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 String\cf8 (\cf0 encryptedData\cf8 )\cf7 ;\cf0 \
+\'a0\
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 message\cf8 )\cf7 ;\cf0 \
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 ed\cf8 )\cf7 ;\cf0 \
+\'a0\
+			
+\f2\b \cf13 byte
+\f1\b0 \cf8 []\cf0  decryptedData \cf7 =\cf0  c.\cf10 decrypt\cf8 (\cf0 encryptedData\cf8 )\cf7 ;\cf0 \
+			\cf9 String\cf0  dd \cf7 =\cf0  
+\f2\b new
+\f1\b0  \cf9 String\cf8 (\cf0 decryptedData\cf8 )\cf7 ;\cf0 \
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf0 dd\cf8 )\cf7 ;\cf0 \
+\'a0\
+		\cf8 \}\cf0  \
+		
+\f2\b catch
+\f1\b0 \cf8 (\cf9 Exception\cf0  e\cf8 )\cf0  \cf8 \{\cf0 \
+			\cf9 System\cf0 .\cf10 out\cf0 .\cf10 println\cf8 (\cf11 "Incorrect password"\cf8 )\cf7 ;\cf0 \
+		\cf8 \}\cf0 \
+\'a0\
+	\cf8 \}\cf0 \
+\pard\intbl\itap1\pardeftab720\sl320
+\cf8 \}\cf0 \cell \lastrow\row
+}
