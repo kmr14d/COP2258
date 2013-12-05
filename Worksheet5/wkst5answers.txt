@@ -1,0 +1,33 @@
+Question 1: What does this error mean? Why do we have this error?
+	The error means that we tried to implement the ActionListener and KeyListener 
+	without including the abstract methods that they include. The error is 
+	present because they are not present in the class. 
+	
+Question 2: Where did the methods c.setSize() and c.setVisible() come from?
+	They were imported with JFrame which inherited them from Frame which inherited 
+	them from Window.
+
+Question 3: Using the API, why can we use the add method from the Container class 
+in the ChatClient class?
+	Because JFrame extends Frame which extends Window which extends Container. 
+	So by importing JFrame, the ChatClient class is able to use the add method 
+	from the Container class.
+	
+Question 4: Why can we use the 'this' keyword to add an ActionListener and a 
+KeyListener?
+	Because it is a keyword that refers to that instantiation of the class. 
+	It can be used twice because it is basically referring to itself, or 
+	more vaguely, the instance in which it is used.
+	
+Question 5: What does this method do?
+	It pays attention to the keys that the user is pressing, with special focus 
+	on the enter key, and if the enter key is pressed, (with the key code constant
+	VK_...) it appends the typed text to the end of the document, aka puts it in 
+	the sent chat box.
+	
+Question 6: What does this method do?
+	It basically does the same thing that the previous method does but it pays 
+	attention to if the 'send' button is pressed. And if that button is pressed
+	it appends the typed text to the end of the document, aka puts it in 
+	the sent chat box.
+

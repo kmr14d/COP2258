@@ -1,0 +1,1 @@
+This is a file with some important data in it.  You should encrypt it so that people cannot know the secret contents of this file.
